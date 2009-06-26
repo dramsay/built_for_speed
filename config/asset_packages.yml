@@ -8,8 +8,10 @@ javascripts:
   - application
 stylesheets: 
 - base:
-  - reset
-  - typography
-  - forms
-  - grid 
+  - blueprint/reset
+  - blueprint/typography
+  - blueprint/forms
+  - blueprint/grid 
   - base
+- print:
+  - blueprint/print
