@@ -1,6 +1,6 @@
 <h1>New post</h1>
 
-<% form_for(@post) do |f| %>
+<% form_for(:post, @post, :url => posts_path, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -10,6 +10,10 @@
   <p>
     <%= f.label :body %><br />
     <%= f.text_area :body %>
+  </p>
+  <p>
+  	<%= f.label :image %><br />
+    <%= f.file_field :image %>
   </p>
   <p>
     <%= f.submit 'Create' %>

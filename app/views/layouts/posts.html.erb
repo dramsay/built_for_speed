@@ -5,13 +5,21 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Posts: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag "blueprint/reset", :media => "screen, projection" %>
+  <%= stylesheet_link_tag "blueprint/typography", :media => "screen, projection" %>
+  <%= stylesheet_link_tag "blueprint/forms", :media => "screen, projection" %>
+  <%= stylesheet_link_tag "blueprint/grid", :media => "screen, projection" %>
+  <%= stylesheet_link_tag "blueprint/print", :media => "print" %>
+  <!--[if lt IE 8]>
+	<%= stylesheet_link_tag "blueprint/ie", :media => "screen, projection" %>
+  <![endif]-->
+  <%= stylesheet_link_tag "base", :media => "screen, projection" %>
+  <%= javascript_include_tag :defaults %>
 </head>
 <body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-
+	<div class="container">
+		<p style="color: green"><%= flash[:notice] %></p>
+	    <%= yield %>
+	</div>
 </body>
 </html>
