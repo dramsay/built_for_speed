@@ -5,16 +5,12 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Posts: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag "blueprint/reset", :media => "screen, projection" %>
-  <%= stylesheet_link_tag "blueprint/typography", :media => "screen, projection" %>
-  <%= stylesheet_link_tag "blueprint/forms", :media => "screen, projection" %>
-  <%= stylesheet_link_tag "blueprint/grid", :media => "screen, projection" %>
-  <%= stylesheet_link_tag "blueprint/print", :media => "print" %>
+  <%= stylesheet_link_merged :base, :media => "screen, projection" %>
+  <%= stylesheet_link_merged :print, :media => "print" %>
   <!--[if lt IE 8]>
-	<%= stylesheet_link_tag "blueprint/ie", :media => "screen, projection" %>
+	<%= stylesheet_link_merged :ie, :media => "screen, projection" %>
   <![endif]-->
-  <%= stylesheet_link_tag "base", :media => "screen, projection" %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_merged :defaults %>
 </head>
 <body>
 	<div class="container">

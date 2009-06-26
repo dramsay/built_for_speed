@@ -15,3 +15,5 @@ stylesheets:
   - base
 - print:
   - blueprint/print
+- ie:
+  - blueprint/ie
