@@ -1,6 +1,6 @@
 <h1><%= h @post.title %></h1>
 
-<%= image_tag @post.image.url(:large), :class => 'left' %>
+<%= image_tag @post.cloudfront_url(:large), :class => 'left' %>
 <%= simple_format(h(@post.body)) %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
