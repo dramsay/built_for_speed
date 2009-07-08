@@ -114,7 +114,8 @@ module Synthesis
       build unless package_exists?
 
       path = @target_dir.gsub(/^(.+)$/, '\1/')
-      "#{path}#{@target}_packaged"
+      name = "#{path}#{@target}_packaged"
+      name += "_#{REVISION}" if defined? REVISION
     end
 
     def build
