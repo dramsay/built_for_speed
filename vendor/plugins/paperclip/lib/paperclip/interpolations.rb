@@ -48,7 +48,7 @@ module Paperclip
 
     # Returns the timestamp as defined by the <attachment>_updated_at field
     def timestamp attachment, style
-      attachment.instance_read(:updated_at).to_s
+      attachment.instance_read(:updated_at).to_i
     end
 
     # Returns the RAILS_ROOT constant.
